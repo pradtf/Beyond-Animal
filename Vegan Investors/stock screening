@@ -1,0 +1,3 @@
+for filename of columns w/ URLS, do: if grep "string 1| string 2, etc." URL column 1, then cat column 2 (1 column for the URLs, the other for the stock symbols) > category 1.txt, else cat column 2 (1 column for the URLs, the other for the stock symbols) > category 2.txt; fi; done
+
+if grep "string 1| string 2, etc." https://finance.yahoo.com/quote/[A-ZZZZZ]/profile, then cat [*] > category1.txt; elif grep "string 3|string 4" https://finance.yahoo.com/quote/[A-ZZZZZ]/profile, then cat [*] > category2.txt, else cat [*] > category3.txt; fi
