@@ -3,9 +3,9 @@ specific stock names: for filename of columns w/ URLS, do: if grep "string 1| st
 going through every stock: if grep "string 1| string 2, etc." https://finance.yahoo.com/quote/[A-ZZZZZ]/profile, then cat [*] > category1.txt; elif grep "string 3|string 4" https://finance.yahoo.com/quote/[A-ZZZZZ]/profile, then cat [*] > category2.txt, else cat [*] > category3.txt; fi
 
 w/ keywords:
-if grep "hunt|fish|meat|leather|milk|dairy|poultry|wool|limestone|marble|animal|boat|food" https://finance.yahoo.com/quote/[A-ZZZZZ]/profile, then cat [*] > animal.txt; 
-elif grep "drugs|pharmaceutical|mouse|test|rabbit" https://finance.yahoo.com/quote/[A-ZZZZZ]/profile, then cat [*] > pharmaceuticals.txt;
-elif grep "tv|channels|movies|weapons|video|games" https://finance.yahoo.com/quote/[A-ZZZZZ]/profile, then cat [*] > violence.txt;
-elif grep "gold|groundwater|golf|plastic" https://finance.yahoo.com/quote/[A-ZZZZZ]/profile, then cat [*] > env.txt;
-elif grep "crude|oil|natural gas|upstream|midstream|downstream|gasoline|propane|diesel|petrol|petroleum|ethylene|coal" https://finance.yahoo.com/quote/[A-ZZZZZ]/profile, then cat [*] > oil.txt;
+if grep "hunt|fish|meat|leather|milk|dairy|poultry|wool|limestone|marble|animal|boat|food" https://finance.yahoo.com/quote/[A-ZZZZZ]/profile; then cat [*] > animal.txt; 
+elif grep "drugs|pharmaceutical|mouse|test|rabbit" https://finance.yahoo.com/quote/[A-ZZZZZ]/profile; then cat [*] > pharmaceuticals.txt;
+elif grep "tv|channels|movies|weapons|video|games" https://finance.yahoo.com/quote/[A-ZZZZZ]/profile; then cat [*] > violence.txt;
+elif grep "gold|groundwater|golf|plastic" https://finance.yahoo.com/quote/[A-ZZZZZ]/profile; then cat [*] > env.txt;
+elif grep "crude|oil|natural gas|upstream|midstream|downstream|gasoline|propane|diesel|petrol|petroleum|ethylene|coal" https://finance.yahoo.com/quote/[A-ZZZZZ]/profile; then cat [*] > oil.txt;
 else cat [*] > vegan.txt; fi
